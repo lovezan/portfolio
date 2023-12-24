@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Talib Hassan</title>
+
+    <!--  Bootstrap css file  -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+
+    <!--  font awesome icons  -->
+    <link rel="stylesheet" href="./css/all.min.css" />
+
+    <!--  Magnific Popup css file  -->
+    <link
+      rel="stylesheet"
+      href="./vendor/Magnific-Popup/dist/magnific-popup.css"
+    />
+
+    <!--  Owl-carousel css file  -->
+    <link
+      rel="stylesheet"
+      href="./vendor/owl-carousel/css/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./vendor/owl-carousel/css/owl.theme.default.min.css"
+    />
+
+    <!--  custom css file  -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!--  Responsive css file  -->
+    <link rel="stylesheet" href="./css/responsive.css" />
+    
+  </head>
+
+  <body id="body">
+    <!--  ======================= Start Header Area ============================== -->
+
+    <header class="header_area">
+      <div class="main-menu">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="#"
+            ><img src="./img/logo.png" class="logo"  alt="logo"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="mr-auto"></div>
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="#"
+                  >Home <span class="sr-only">(current)</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#project-section" id="project-link">projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about-section" id="about-link">about</a>
+              </li>
+              <li class="nav-item" >
+                <a class="nav-link" href="#services-section" id="services-link">services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#media-section" id="media-link">follow</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#experience-section" id="experience-link">experience</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#subs-section" id="subs-link">subscribe</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!--  ======================= End Header Area ============================== -->
+
+    <!--  ======================= Start Main Area ================================ -->
+    <main class="site-main" id="site-main">
+      <!--  ======================= Start Banner Area =======================  -->
+      <section class="site-banner" >
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 col-md-12 site-title">
+              <h3 class="title-text">Hey</h3>
+              <h1 class="title-text text-uppercase">
+                I am
+                <p id="name">Talib Hassan</p>
+              </h1>
+              <h4 class="title-text text-uppercase developer">
+                Softwere deveoper
+              </h4>
+              <div class="site-buttons">
+                <div class="d-flex flex-row flex-wrap">
+                  <div class="b1">
+                    <button
+    type="button"
+    class="btn button primary-button mr-4 text-uppercase"
+    onclick="showAlertAndForm()"
+  >
+    Hire me
+  </button>
+                  </div>
+                  <div class="b2">
+                    <button onclick="showAlertGetCV() "
+                      type="button"
+                      class="btn button secondary-button text-uppercase"
+                    >
+                      Get cv
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-12 banner-image">
+              <img
+                src="./img/banner/talib1.png"
+                alt="banner-img"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--  ======================= End Banner Area =======================  -->
+
+      <!-- =========================CV DOENLOAD START======================== -->
+      
+      <div class="custom-alert" id="customAlertGetCV">
+        <span class="close-btn" onclick="closeCustomAlertGetCV()">&times;</span>
+        <div class="alert-content">
+          <h2>Download CV</h2>
+          <p>Choose the document type:</p>
+          <button class="download-btn" onclick="downloadResume()">Resume</button>
+          <button class="download-btn" onclick="downloadCV()">CV</button>
+        </div>
+      </div>
+
+
+      
+      <!-- =========================CV DOENLOAD ENDS======================== -->
+      
+      <!-- ======================HIRING PAGE STAT======================== -->
+      <div class="overlay" id="overlay">
+        <div class="form-container">
+          <span class="close-btn" onclick="closeOverlay()">&times;</span>
+          <h2>Company Hiring Form</h2>
+          <form>
+            <label for="companyName">Company Name:</label>
+            <input type="text" id="companyName" name="companyName" required placeholder="Enter Company Name">
+      
+            <label for="contactPerson">Contact Person:</label>
+            <input type="text" id="contactPerson" name="contactPerson" required placeholder="Enter Contact Number">
+      
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your Email">
+      
+            <label for="message">Descreption:</label>
+            <textarea id="message" name="message" required></textarea>
+      
+            <!-- <button type="button" id="submitBtn" onclick="submitForm()">Submit</button> -->
+            <!-- <button type="button" class="done-btn" onclick="showDone()">Done</button> -->
+          </form>
+          <div class="default">
+
+            <button type="button" id="submitBtn" onclick="SendEmail()">Submit</button>
+            <span id="default">Complete form Get To submit Button !</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Customized alert card -->
+<div class="custom-alert" id="customAlert"> 
+  <div class="alert-content">
+    <!-- <span class="close-btn" onclick="closeOverlay()">&times;</span> -->
+    <h2>Thanks for choosing me!</h2>
+    <p>We appreciate your interest. Looking forward to working together.</p>
+    <button type="button" class="done-btn" onclick="closeCustomAlert()">Done</button>
+  </div>
+</div>
+      
+      <!--  ========================= About Area ==========================  -->
+
+      <section class="about-area" id="about-section">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-6 col-md-12">
+              <div class="about-image"  >
+                <img
+                  src="./img/about-us.png"
+                  alt="About us"
+                  class="img-fluid"
+                />
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-12 about-title">
+              <h2 class="text-uppercase pt-5">
+                <span>Let me</span>
+                <span>introduce</span>
+                <span>myself</span>
+              </h2>
+              <div class="paragraph py-4 w-75">
+                <p class="para">
+                  "I began my educational journey at Jawahar Navodaya Vidyalaya
+                  (JNV) Kargil, where I completed my schooling from 6th to 12th
+                  grade. During my time at JNV, I was introduced to a wide range
+                  of subjects, but computer science was not among them. However,
+                  my curiosity and passion for technology drove me to explore
+                  this field independently.
+                </p>
+                <p class="para">
+                  Upon securing admission at the National Institute of
+                  Technology (NIT) Hamirpur, where I am currently pursuing a
+                  Bachelor of Technology in Computer Science and Engineering
+                  (CSE), I embarked on a transformative journey. At college, I
+                  delved headfirst into the world of computer science.
+                </p>
+                <p class="para">
+                  I started from scratch, learning the intricacies of coding,
+                  software development, and more. My skill set has grown
+                  significantly since then. I am proficient in various areas,
+                  including web development and app development using Flutter. I
+                  am also skilled in using design tools like Figma. In addition,
+                  I have dabbled in video and photo editing, showcasing my
+                  versatility and adaptability. Moreover, I possess a strong
+                  foundation in C++ and C, and I have honed my skills in Data
+                  Structures and Algorithms (DSA). I am a passionate competitive
+                  programmer, constantly seeking new challenges and
+                  opportunities to refine my problem-solving abilities.
+                </p>
+                <p class="para">
+                  Though the transition was challenging, my determination and
+                  dedication allowed me to overcome obstacles and acquire these
+                  skills. I take pride in my ability to learn and adapt quickly,
+                  which has been a key factor in my educational journey. My
+                  background at JNV Kargil and my subsequent experiences at NIT
+                  Hamirpur have shaped me into a well-rounded individual with a
+                  strong foundation in computer science and a penchant for
+                  continuous learning. I am excited about the opportunities that
+                  lie ahead and look forward to further honing my skills and
+                  contributing to the field of technology."
+                </p>
+              </div>
+              <button
+                type="button"
+                class="btn button primary-button text-uppercase"
+              >
+                Download cv
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--  ========================= End About Area ==========================  -->
+
+      <!--  ======================== Brand Area ==============================  -->
+
+      <section class="brand-area" >
+        <div class="container-fluid" id="experience-section">
+          <div class="row">
+            <div class="col-xl-6 col-lg-12 col-md-12">
+              <div class="first-row row">
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                  <div class="single-brand">
+                    <a href="" class="link" targer="-blank">
+                      <img src="./img/brands/iaol3.png" alt="Brand-1 "
+                    /></a>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                  <div class="single-brand">
+                    <a
+                      class="link"
+                      href="https://appteam-nith.github.io/"
+                      target="-blank"
+                    >
+                      <img
+                        src="./img/brands/appteam.png"
+                        alt="Brand-2 "
+                        href="https://appteam-nith.github.io/"
+                    /></a>
+                  </div>
+                </div>
+                <!--  <div class="col-lg-4 col-md-6 col-sm-6">
+                  <div class="single-brand">
+                    <img src="./img/brands/logo3.png" alt="Brand-3 " />
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                  <div class="single-brand">
+                    <img src="./img/brands/logo4.png" alt="Brand-4" />
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                  <div class="single-brand">
+                    <img src="./img/brands/logo5.png" alt="Brand-5 " />
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                  <div class="single-brand">
+                    <img src="./img/brands/logo6.png" alt="Brand-6" />
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                  <div class="single-brand">
+                    <img src="./img/brands/logo7.png" alt="Brand-7 " />
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                  <div class="single-brand">
+                    <img src="./img/brands/logo8.png" alt="Brand-8 " />
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                  <div class="single-brand">
+                    <img src="./img/brands/logo9.png" alt="Brand-9" />
+                  </div>
+                </div> -->
+              </div>
+            </div>
+            <div class="col-xl-6 col-lg-12 col-md-12">
+              <div class="experience-area">
+                <div class="d-flex flex-row years-area">
+                  <h2 class="p-3 years">3</h2>
+                  <h2>
+                    <span>Years</span>
+                    <span>Experience</span>
+                    <span>Working</span>
+                  </h2>
+                </div>
+                <div class="d-flex flex-row flex-wrap call-area">
+                  <span><i class="fas fa-phone-alt fa-3x px-3"></i></span>
+                  <div class="call-now">
+                    <a href="#" class="text-uppercase h4 font-roboto"
+                      >Call Now</a
+                    >
+                    <span class="font-roboto py-2">(+91)-9797-148107</span>
+                  </div>
+                </div>
+                <div class="bg-panel"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--  ======================== End Brand Area ==============================  -->
+
+      <!--  ====================== Start Services Area =============================  -->
+
+      <section class="services-area" id="services-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 text-center services-title">
+              <h1 class="text-uppercase title-text">Services Offers</h1>
+              <p class="para">
+                🌐 Web Development: Craft stunning websites using the latest
+                technologies for a seamless online presence. 📱 App Development:
+                Create engaging mobile applications that captivate users on
+                Android and iOS. 🎨 Design: Craft visually appealing and
+                user-friendly designs with a keen eye for detail. 📝 Content
+                Creation: Deliver compelling content that tells your brand's
+                story and engages your audience. 🛒 E-commerce Solutions:
+                Establish, optimize, and maintain e-commerce platforms for a
+                seamless shopping experience. 💼 Consulting: Provide expert
+                guidance to help businesses thrive, backed by years of
+                experience. These services are tailored to meet your digital
+                needs and drive success in the online world.
+              </p>
+            </div>
+          </div>
+          <div class="container services-list">
+            <div class="row">
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="services">
+                  <div class="sevices-img text-center py-4">
+                    <img src="./img/services/s1.png" alt="Services-1" />
+                  </div>
+                  <div class="card-body text-center">
+                    <h5 class="card-title text-uppercase font-roboto">
+                      APP developer
+                    </h5>
+                    <div class="skills carousel">
+                      <div class="owl-carousel owl-theme">
+                        <div class="image">
+                          <img src="./img/skills/flutter.png" alt="" />
+                          <div class="col-log-8 col-md-12 name">
+                            <p class="imgText text-uppercase">flutter</p>
+                          </div>
+                        </div>
+                        <div class="image">
+                          <img src="./img/skills/dart.png" alt="" />
+                          <div class="col-log-8 col-md-12 name">
+                            <p class="imgText text-uppercase">dart</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="services">
+                  <div class="sevices-img text-center py-4">
+                    <img src="./img/services/s2.png" alt="Services-2" />
+                  </div>
+                  <div class="card-body text-center">
+                    <h5 class="card-title text-uppercase font-roboto">
+                      ux/ui desing
+                    </h5>
+                    <div class="skills carousel">
+                      <div class="owl-carousel owl-theme">
+                        <div class="image">
+                          <img src="./img/skills/figma.png" alt="" />
+                          <div class="col-log-8 col-md-12 name">
+                            <p class="imgText text-uppercase">Figma</p>
+                          </div>
+                        </div>
+                        <div class="image">
+                          <img src="./img/skills/canva.png" alt="" />
+                          <div class="col-log-8 col-md-12 name">
+                            <p class="imgText text-uppercase">canva</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="services">
+                  <div class="sevices-img text-center py-4">
+                    <img src="./img/services/s3.png" alt="Services-3" />
+                  </div>
+                  <div class="card-body text-center">
+                    <h5 class="card-title text-uppercase font-roboto">
+                      web design
+                    </h5>
+                    <div class="skills carousel">
+                      <div class="owl-carousel owl-theme">
+                        <div class="image">
+                          <img src="./img/skills/html.png" alt="" />
+                          <div class="col-log-8 col-md-12 name">
+                            <p class="imgText text-uppercase">HTML</p>
+                          </div>
+                        </div>
+                        <div class="image">
+                          <img src="./img/skills/css.png" alt="" />
+                          <div class="col-log-8 col-md-12 name">
+                            <p class="imgText text-uppercase">css</p>
+                          </div>
+                        </div>
+                        <div class="image">
+                          <img src="./img/skills/js.png" alt="" />
+                          <div class="col-log-8 col-md-12 name">
+                            <p class="imgText text-uppercase">Javascript</p>
+                          </div>
+                        </div>
+                        <div class="image">
+                          <img src="./img/skills/html.png" alt="" />
+                          <div class="col-log-8 col-md-12 name">
+                            <p class="imgText text-uppercase">bootstrap</p>
+                          </div>
+                        </div>
+                        <div class="image">
+                          <img src="./img/skills/nodejs.png" alt="" />
+                          <div class="col-log-8 col-md-12 name">
+                            <p class="imgText text-uppercase">tailwindCSS</p>
+                          </div>
+                        </div>
+                        <div class="image">
+                          <img src="./img/skills/nodejs.png" alt="" />
+                          <div class="col-log-8 col-md-12 name">
+                            <p class="imgText text-uppercase">NODEJS</p>
+                          </div>
+                        </div>
+                        <div class="image">
+                          <img src="./img/skills/expressjs.png" alt="" />
+                          <div class="col-log-8 col-md-12 name">
+                            <p class="imgText text-uppercase">Expressjs</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="services">
+                  <div class="sevices-img text-center py-4">
+                    <img src="./img/services/s4.png" alt="Services-4" />
+                  </div>
+                  <div class="card-body text-center">
+                    <h5 class="card-title text-uppercase font-roboto">
+                     Editing
+                    </h5>
+                    <div class="skills carousel">
+                      <div class="owl-carousel owl-theme">
+                        <div class="image">
+                          <img src="./img/skills/html.png" alt="" />
+                          <div class="col-log-8 col-md-12 name">
+                            <p class="imgText text-uppercase">Video Editing</p>
+                          </div>
+                        </div>
+                        <div class="image">
+                          <img src="./img/skills/css.png" alt="" />
+                          <div class="col-log-8 col-md-12 name">
+                            <p class="imgText text-uppercase">Photo editing</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--  ====================== End Services Area =============================  -->
+
+      <!--  ======================= Project Area =============================  -->
+
+      <section class="project-area" id="project-section">
+        <div class="container">
+          <div class="project-title pb-5">
+            <h1 class="text-uppercase title-h1">Recently Done Project</h1>
+            <h1 class="text-uppercase title-h1">Quality Work</h1>
+          </div>
+
+          <div class="button-group">
+            <button type="button" class="active" id="btn1" data-filter="*">
+              All
+            </button>
+            <button type="button" data-filter=".popular">Popular</button>
+            <button type="button" data-filter=".latest">Latest</button>
+            <button type="button" data-filter=".following">Following</button>
+            <button type="button" data-filter=".upcoming">Upcoming</button>
+          </div>
+
+          <div class="row grid">
+            <div class="col-lg-4 col-md-6 col-sm-12 element-item latest">
+              <div class="our-project">
+                <div class="img">
+                  <a class="test-popup-link" href="./img/portfolio/p1.webp">
+                    <img
+                      src="./img/portfolio/p1.webp"
+                      alt="portfolio-1"
+                      class="img-fluid"
+                    />
+                  </a>
+                </div>
+                <div class="title py-4">
+                  <h4 class="text-uppercase"Weather CHECK</h4>
+                  <span class="text-secondary">Latest, Weatherweb</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 element-item popular">
+              <div class="our-project">
+                <div class="img">
+                  <a class="test-popup-link" href="./img/portfolio/p3.jpg">
+                    <img
+                      src="./img/portfolio/p3.jpg"
+                      alt="portfolio-2"
+                      class="img-fluid"
+                    />
+                  </a>
+                </div>
+                <div class="title py-4">
+                  <h4 class="text-uppercase">MusicMedia</h4>
+                  <span class="text-secondary">Popular, MusicWeb</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 element-item popular">
+              <div class="our-project">
+                <div class="img">
+                  <a class="test-popup-link" href="./img/portfolio/p2.avif">
+                    
+                    <img
+                      src="./img/portfolio/p2.avif"
+                      alt="portfolio-3"
+                      class="img-fluid"
+                    />
+                  </a>
+                </div>
+                <div class="title py-4">
+                  <h4 class="text-uppercase">QouteS</h4>
+                  <span class="text-secondary">Popular, QoutesWeb</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 element-item upcoming">
+              <div class="our-project">
+                <div class="img">
+                  <a class="test-popup-link" href="./img/portfolio/p4.jpg">
+                    <img
+                      src="./img/portfolio/p4.jpg"
+                      alt="portfolio-4"
+                      class="img-fluid"
+                    />
+                  </a>
+                </div>
+                <div class="title py-4">
+                  <h4 class="text-uppercase">HilffireApp</h4>
+                  <span class="text-secondary">Popular, FlutterApp</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 element-item upcoming">
+              <div class="our-project">
+                <div class="img">
+                  <a class="test-popup-link" href="./img/portfolio/p5.jpg">
+                    <img
+                      src="./img/portfolio/p5.jpg"
+                      alt="portfolio-5"
+                      class="img-fluid"
+                    />
+                  </a>
+                </div>
+                <div class="title py-4">
+                  <h4 class="text-uppercase">News Web</h4>
+                  <span class="text-secondary">Upcoming, Web</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 element-item following">
+              <div class="our-project">
+                <div class="img">
+                  <a class="test-popup-link" href="./img/portfolio/p6.jpg">
+                    <img
+                      src="./img/portfolio/p6.jpg"
+                      alt="portfolio-6"
+                      class="img-fluid"
+                    />
+                  </a>
+                </div>
+                <div class="title py-4">
+                  <h4 class="text-uppercase">Animation project</h4>
+                  <span class="text-secondary">Following, web</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 element-item following">
+              <div class="our-project">
+                <div class="img">
+                  <a class="test-popup-link" href="./img/portfolio/p7.jpg">
+                    <img
+                      src="./img/portfolio/p7.jpg"
+                      alt="portfolio-7"
+                      class="img-fluid"
+                    />
+                  </a>
+                </div>
+                <div class="title py-4">
+                  <h4 class="text-uppercase">Green Heaven</h4>
+                  <span class="text-secondary">Following, Portfolio</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 element-item following">
+              <div class="our-project">
+                <div class="img">
+                  <a class="test-popup-link" href="./img/portfolio/p8.jpg">
+                    <img
+                      src="./img/portfolio/p8.jpg"
+                      alt="portfolio-8"
+                      class="img-fluid"
+                    />
+                  </a>
+                </div>
+                <div class="title py-4">
+                  <h4 class="text-uppercase">Fly Male</h4>
+                  <span class="text-secondary">Following, Portfolio</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 element-item upcoming">
+              <div class="our-project">
+                <div class="img">
+                  <a class="test-popup-link" href="./img/portfolio/p9.jpg">
+                    <img
+                      src="./img/portfolio/p9.jpg"
+                      alt="portfolio-9"
+                      class="img-fluid"
+                    />
+                  </a>
+                </div>
+                <div class="title py-4">
+                  <h4 class="text-uppercase">E-commerce</h4>
+                  <span class="text-secondary">Upcoming, FlutterApp</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--  ======================= End Project Area =============================  -->
+
+      <!--  ======================== About Me Area ==============================  -->
+<!-- 
+      <section class="about-area">
+        <div class="container">
+          <div class="row text-center">
+            <div class="col-12">
+              <div class="about-title">
+                <h1 class="text-uppercase title-h1">Client Say about me</h1>
+                <p class="para">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Repellendus, deleniti recusandae. Esse incidunt rem
+                  repellendus ab voluptates maxime? Nemo, numquam!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container carousel py-lg-5">
+          <div class="owl-carousel owl-theme">
+            <div class="client row">
+              <div class="col-lg-4 col-md-12 client-img">
+                <img
+                  src="./img/testimonials/t1.jpg"
+                  alt="img1"
+                  class="img-fluid"
+                />
+              </div>
+              <div class="col-lg-8 col-md-12 about-client">
+                <h4 class="text-uppercase">John Martin</h4>
+                <p class="para">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Quidem architecto consequuntur ratione, obcaecati corrupti
+                  deserunt.
+                </p>
+              </div>
+            </div>
+            <div class="client row">
+              <div class="col-lg-4 col-md-12 client-img">
+                <img
+                  src="./img/testimonials/t2.jpg"
+                  alt="img2"
+                  class="img-fluid"
+                />
+              </div>
+              <div class="col-lg-8 col-md-12 about-client">
+                <h4 class="text-uppercase">Mac Hill</h4>
+                <p class="para">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Quidem architecto consequuntur ratione, obcaecati corrupti
+                  deserunt.
+                </p>
+              </div>
+            </div>
+            <div class="client row">
+              <div class="col-lg-4 col-md-12 client-img">
+                <img
+                  src="./img/testimonials/t1.jpg"
+                  alt="img1"
+                  class="img-fluid"
+                />
+              </div>
+              <div class="col-lg-8 col-md-12 about-client">
+                <h4 class="text-uppercase">John Martin</h4>
+                <p class="para">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Quidem architecto consequuntur ratione, obcaecati corrupti
+                  deserunt.
+                </p>
+              </div>
+            </div>
+            <div class="client row">
+              <div class="col-lg-4 col-md-12 client-img">
+                <img
+                  src="./img/testimonials/t2.jpg"
+                  alt="img2"
+                  class="img-fluid"
+                />
+              </div>
+              <div class="col-lg-8 col-md-12 about-client">
+                <h4 class="text-uppercase">Mac Hill</h4>
+                <p class="para">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Quidem architecto consequuntur ratione, obcaecati corrupti
+                  deserunt.
+                </p>
+              </div>
+            </div>
+            <div class="client row">
+              <div class="col-lg-4 col-md-12 client-img">
+                <img
+                  src="./img/testimonials/t1.jpg"
+                  alt="img1"
+                  class="img-fluid"
+                />
+              </div>
+              <div class="col-lg-8 col-md-12 about-client">
+                <h4 class="text-uppercase">John Martin</h4>
+                <p class="para">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Quidem architecto consequuntur ratione, obcaecati corrupti
+                  deserunt.
+                </p>
+              </div>
+            </div>
+            <div class="client row">
+              <div class="col-lg-4 col-md-12 client-img">
+                <img
+                  src="./img/testimonials/t2.jpg"
+                  alt="img2"
+                  class="img-fluid"
+                />
+              </div>
+              <div class="col-lg-8 col-md-12 about-client">
+                <h4 class="text-uppercase">Mac Hill</h4>
+                <p class="para">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Quidem architecto consequuntur ratione, obcaecati corrupti
+                  deserunt.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+
+      <!--  ======================== End About Me Area ==============================  -->
+
+      <!--  ========================== Subscribe me Area ============================  -->
+      <section class="subscribe-us-area" id="subs-section">
+        <div class="container subscribe">
+          <div class="row">
+            <div class="col-lg-12 text-center subscribe-title">
+              <h4 class="text-uppercase">Get Update From anywhere</h4>
+              <p class="para">
+                Subscribe to get notified when I post new projects. Stay in the loop with the latest updates.
+              </p>
+              
+              <p >
+         Not Wornking Yet !!
+              </p>
+              
+                
+            </div>
+          </div>
+          <div class="d-sm-flex justify-content-center">
+            <form class="w-50">
+              <div class="row d-flex flex-row flex-wrap">
+                <div class="col input-textbox">
+                  <input
+                    type="text"
+                    id="txtemail"
+                    class="form-control"
+                    placeholder="Email"
+                  />
+                </div>
+                <div class="col">
+                  <div class="btn-submit">
+                    <button type="submit" class="btn btn-success float-right">
+                      Subscribe
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!--  ========================== End Subscribe me Area ============================  -->
+    </main>
+    <!--  ======================= End Main Area ================================ -->
+
+    <footer class="footer-area" id="media-section">
+      <div class="container">
+        <div class="">
+          <div class="site-logo text-center py-4">
+            <a href="#"><img src="./img/logo.png" alt="logo" /></a>
+          </div>
+          <div class="social text-center">
+            <h5 class="text-uppercase">Follow me</h5>
+            <a href="https://www.facebook.com/love.zan.7161" target="-blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/talib.hassan_/" target="-blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@Yataliblogy" target="-blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://github.com/lovezan" target="-blank><i class="fab fa-github" "></i></a>
+            <!-- <a href="#"><i class="fab fa-linkedln"></i></a>
+            <a href="#"><i class="fab fa-codeforce"></i></a> -->
+          </div>
+          <div class="copyrights text-center">
+            <p class="para">
+              Copyright ©2019 All rights reserved | This template is made with
+              by
+              <a href="#"
+                ><span style="color: var(--primary-color)"
+                  >Talib Hassan</span
+                ></a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!--  Jquery js file  -->
+    <script src="./js/jquery.3.4.1.js"></script>
+
+    <!--  Bootstrap js file  -->
+    <script src="./js/bootstrap.min.js"></script>
+
+    <!--  isotope js library  -->
+    <script src="./vendor/isotope/isotope.min.js"></script>
+
+    <!--  Magnific popup script file  -->
+    <script src="./vendor/Magnific-Popup/dist/jquery.magnific-popup.min.js"></script>
+
+    <!--  Owl-carousel js file  -->
+    <script src="./vendor/owl-carousel/js/owl.carousel.min.js"></script>
+
+    <!--  custom js file  -->
+    <script src="./js/main.js"></script>
+
+    <!-- Emialjs -->
+    <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+  ></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("pinxOSV4t-QTto8TA");
+    })();
+  </script>
+</script>
+
+
+<!-- ALERT PORTION -->
+    <script>
+      const submitButton = document.getElementById('submitBtn');
+      
+      function resetForm() {
+        document.getElementById('companyName').value = '';
+        document.getElementById('contactPerson').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('message').value = '';
+    
+        // Hide the submit button after resetting the form
+        //document.getElementById('submitBtn').style.display = 'none';
+      }
+
+
+   //    CV DOWNLOAD HERE START 
+
+   function showAlertGetCV() {
+    document.getElementById('customAlertGetCV').style.display = 'flex';
+  }
+
+  function closeCustomAlertGetCV() {
+    document.getElementById('customAlertGetCV').style.display = 'none';
+  }
+
+  function downloadResume() {
+    // Replace with your logic to download the resume
+    const resumePath = 'img/Resume1.pdf';
+    window.open(resumePath, '_blank');
+    //alert('Downloading Resume...');
+    closeCustomAlertGetCV();
+  }
+
+  function downloadCV() {
+    // Replace with your logic to download the CV
+    const resumePath = 'img/Resume1.pdf';
+    window.open(resumePath, '_blank');
+    closeCustomAlertGetCV();
+  }
+
+   //    CV DOWNLOAD HERE ENDS 
+
+
+      function checkFormValidity() {
+        const companyName = document.getElementById('companyName').value;
+        const contactPerson = document.getElementById('contactPerson').value;
+        const email = document.getElementById('email').value;
+    
+        const submitButton = document.getElementById('submitBtn');
+        const replace= document.getElementById('default');
+    
+        if (companyName && contactPerson && email) {
+          submitButton.style.display = 'block';
+          replace.style.display = 'none';
+        } else {
+          
+          replace.style.display = 'block';
+          submitButton.style.display = 'none';
+        }
+      }
+
+
+    
+      // Add event listeners to input fields to dynamically check form validity
+      document.getElementById('companyName').addEventListener('input', checkFormValidity);
+      document.getElementById('contactPerson').addEventListener('input', checkFormValidity);
+      document.getElementById('email').addEventListener('input', checkFormValidity);
+      
+      
+      
+      function showAlertAndForm() {
+        // Show the overlay
+
+        submitButton.style.display = 'none';
+        resetForm();
+
+        document.getElementById('overlay').style.display = 'flex';
+      }
+      
+      function closeOverlay() {
+        // Close the overlay
+        document.getElementById('overlay').style.display = 'none';
+        document.getElementById('customAlert').style.display = 'none';
+      }
+     
+      function submitForm() {
+        // Perform actions on form submiss ion
+    // You can replace this with your custom logic
+        // Close the overlay
+        submitButton.style.display = 'none';
+        document.getElementById('customAlert').style.display = 'flex';
+      }
+
+
+
+      //  Send email starts here
+      
+      //function SendEmail(){
+      //  var params={
+      //    companyName: document.getElementById("companyName").value,
+      //    contactPerson: document.getElementById("contactPerson").value,
+      //    email: document.getElementById("email").value,
+      //    message: document.getElementById("message").value,
+      //  };
+      //  emailjs.send("Talib_hassan","template_qudev3i",params).then( (res) =>{
+      //      document.getElementById("companyName").value ="";
+      //      document.getElementById("contactPerson").value ="";
+      //      document.getElementById("email").value ="";
+      //      document.getElementById("message").value ="";
+      //      console.log(res);
+      //      alert("success! ");
+      //  
+      //  }).catch((err)=>console.log(err));
+      //}
+     // Replace with your EmailJS user ID
+
+     function SendEmail() {
+      // Add your email sending logic here
+      // For example, you can use AJAX to send form data to a server
+      // and then display a success message or handle errors accordingly
+      var parms = {
+        companyName: document.getElementById("companyName").value,
+        contactPerson: document.getElementById("contactPerson").value,
+        email: document.getElementById("email").value,
+        message: document.getElementById("message").value,
+      };
+      emailjs
+        .send("Talib_hassan", "template_p1u7uh8", parms)
+        .then(document.getElementById('customAlert').style.display = 'flex');
+    }
+
+
+
+
+
+      
+      function closeCustomAlert() {
+        // Perform actions on form submission
+         
+        document.getElementById('overlay').style.display = 'none';
+    // You can replace this with your custom logic
+        // Close the overlay
+        document.getElementById('customAlert').style.display = 'none';
+      }
+     
+    </script>
+  </body>
+</html>

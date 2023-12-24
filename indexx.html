@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Form Card</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url("background-image.jpg"); /* Replace with your background image */
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .card {
+        background: rgba(0, 0, 0, 0.5); /* Black background with 50% opacity */
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        width: 300px;
+        max-width: 100%;
+        padding: 20px;
+        backdrop-filter: blur(5px); /* Apply a blur effect to the background */
+      }
+
+      form {
+        margin: 0;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+        color: white;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 15px;
+        box-sizing: border-box;
+      }
+
+      button {
+        width: 100%;
+        padding: 10px 15px;
+        background-color: #333;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      #default {
+        display: block;
+        margin-top: 10px;
+        color: white;
+      }
+    </style>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("pinxOSV4t-QTto8TA");
+      })();
+    </script>
+  </head>
+
+  <body>
+    <div class="card">
+      <h2 style="color: white">Company Hiring Form</h2>
+      <form>
+        <label for="companyName">Company Name:</label>
+        <input
+          type="text"
+          id="companyName"
+          name="companyName"
+          required
+          placeholder="Enter Company Name"
+        />
+
+        <label for="contactPerson">Contact Person:</label>
+        <input
+          type="text"
+          id="contactPerson"
+          name="contactPerson"
+          required
+          placeholder="Enter Contact Person"
+        />
+
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          placeholder="Enter your Email"
+        />
+
+        <label for="message">Description:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <div class="default">
+          <button type="button" id="submitBtn" onclick="SendEmail()">
+            Submit
+          </button>
+          <span id="default"
+            >Complete the form to enable the submit button!</span
+          >
+        </div>
+      </form>
+    </div>
+
+    <script>
+      function SendEmail() {
+        // Add your email sending logic here
+        // For example, you can use AJAX to send form data to a server
+        // and then display a success message or handle errors accordingly
+        var parms = {
+          companyName: document.getElementById("companyName").value,
+          contactPerson: document.getElementById("contactPerson").value,
+          email: document.getElementById("email").value,
+          message: document.getElementById("message").value,
+        };
+        emailjs
+          .send("Talib_hassan", "template_p1u7uh8", parms)
+          .then(alert("Email sned succesfully"));
+      }
+    </script>
+  </body>
+</html>
